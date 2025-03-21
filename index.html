@@ -37,19 +37,43 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            z-index: 10;
+            z-index: 1000;
+            width: 100%;
+            transition: opacity 0.3s ease;
+            opacity: 1;
+        }
+
+        header.hidden {
+            opacity: 0;
+            pointer-events: none;
         }
 
         .header-left {
-            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        .burger {
+            display: none;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 0.5rem;
+        }
+
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--color-gold);
+            margin: 5px;
+            transition: all 0.3s ease;
         }
 
         .header-left h1 {
-            margin-bottom: 0.25rem;
+            margin: 0;
             font-size: 2.2rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
         }
@@ -70,10 +94,7 @@
             list-style: none;
             margin: 0;
             padding: 0;
-        }
-
-        nav ul li {
-            margin: 0 1rem;
+            gap: 2rem;
         }
 
         nav ul li a {
@@ -81,8 +102,6 @@
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
-            padding: 0.5rem 0;
-            position: relative;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
         }
 
@@ -104,15 +123,16 @@
         .hero {
             position: relative;
             height: 100vh;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/DSC_0215-2.jpg');
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('assets/DSC_0215-2.jpg');
             background-size: cover;
             background-position: center;
-            margin-top: 0;
+            background-attachment: fixed;
         }
 
         .hero-content {
@@ -174,6 +194,14 @@
         .section {
             padding: 4rem 0;
             border-bottom: 1px solid #333;
+            width: 100%;
+        }
+
+        #contact.section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
         }
 
         h2 {
@@ -321,18 +349,20 @@
 
         .contact-form {
             max-width: 600px;
-            margin: 0 auto 2rem auto;
+            margin: 0 auto;
             color: white;
             padding: 2rem;
             background: var(--color-purple);
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             text-align: center;
+            width: 100%;
         }
 
         .contact-button {
+            width: 100%;
             max-width: 300px;
-            margin: 0 auto;
+            margin: 2rem auto 0;
             display: block;
         }
 
@@ -379,37 +409,86 @@
         }
 
         @media (max-width: 768px) {
+            .burger {
+                display: block;
+                position: fixed;
+                top: 1.2rem;
+                right: 2rem;
+            }
+
             .about-content {
                 flex-direction: column;
+                gap: 2rem;
+                padding: 0 1rem;
             }
-            
-            .hero h1 {
-                font-size: 3rem;
+
+            .about-text {
+                order: 2;
             }
-            
+
+            .about-image {
+                order: 1;
+                max-width: 100%;
+                padding: 0 1rem;
+            }
+
+            .about-image img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .burger.active div:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .burger.active div:nth-child(2) {
+                opacity: 0;
+            }
+
+            .burger.active div:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+
             header {
-                flex-direction: column;
-                padding: 1rem;
-                background-color: var(--color-purple);
-                position: relative;
+                background: transparent;
+                padding: 1rem 2rem;
+            }
+
+            .header-left h1 {
+                font-size: 2rem;
             }
             
-            .header-left {
-                text-align: center;
-                margin-bottom: 1rem;
+            nav {
+                position: fixed;
+                top: 0;
+                left: 100%;
+                height: 100vh;
+                width: 100%;
+                background: var(--color-purple);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease-in-out;
+                opacity: 0;
+            }
+            
+            nav.active {
+                left: 0;
+                opacity: 1;
             }
             
             nav ul {
                 flex-direction: column;
                 align-items: center;
+                gap: 2rem;
             }
             
-            nav ul li {
-                margin: 0.5rem 0;
+            nav ul li a {
+                font-size: 1.5rem;
             }
 
             .hero-content {
-                padding-top: 4rem;
+                padding-top: 0;
             }
 
             .testimonial-container {
@@ -417,19 +496,26 @@
                 padding: 0 1rem;
             }
 
+            #contact.section {
+                padding: 4rem 1rem;
+                width: 100%;
+            }
+
             .contact-form {
                 padding: 1.5rem;
-                margin: 0 1rem;
+                margin: 0;
+                width: 100%;
+            }
+
+            .contact-button {
+                width: 100%;
+                max-width: 300px;
+                margin: 2rem auto 0;
             }
 
             .btn {
                 padding: 0.9rem 2.5rem;
                 font-size: 1rem;
-            }
-
-            .contact-button {
-                max-width: 100%;
-                margin: 0 1rem;
             }
         }
     </style>
@@ -448,6 +534,11 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <div class="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
 
     <section class="hero">
@@ -575,6 +666,46 @@
     <script>
         Fancybox.bind("[data-fancybox]", {
             // Your custom options
+        });
+
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('nav');
+            const navLinks = document.querySelectorAll('nav ul li a');
+            const header = document.querySelector('header');
+
+            // Header visibility functionality
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) { // Show header only when near top
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.remove('hidden');
+                }
+            });
+
+            if (burger && nav) {
+                burger.addEventListener('click', () => {
+                    burger.classList.toggle('active');
+                    nav.classList.toggle('active');
+                    document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+                    if (nav.classList.contains('active')) {
+                        header.classList.remove('hidden'); // Show header when menu is open
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        burger.classList.remove('active');
+                        nav.classList.remove('active');
+                        document.body.style.overflow = '';
+                        // Check scroll position after clicking a link
+                        if (window.scrollY > 50) {
+                            header.classList.add('hidden');
+                        }
+                    });
+                });
+            }
         });
 
         function validateForm() {
