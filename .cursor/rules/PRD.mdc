@@ -1,0 +1,88 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+Project:
+- Thrive Happens website
+
+Outline:
+- I run a website building agency
+- I have a client called Scott who I need to build a website for
+- His business is called Thrive Happens
+
+Tech Stack:
+- Next.js
+- Tailwind CSS
+
+Colours:
+1. 
+2. 
+3. 
+
+Background Colour:
+- 
+
+Pages - Navigation:
+- Home
+- Services
+	- Platform speaker
+	- Executive & Team Coaching
+	- Resilience Workshops
+	- Media
+- Gallery
+
+Pages - Hidden:
+- 
+
+Content - By Page:
+- All Pages
+	- Header
+		- Thrive Happens logo
+		- Menu button on mobile
+		- Pages on desktop
+	- Footer
+		- Thrive Happens
+- Home
+	- About
+		- Strapline
+		- Latin words
+		- Photo of Scott
+	- Testimonials
+		- Latin words
+- Services
+	- Summary & photo for each service
+- Specific service pages
+	- More in depth explanation and more photos
+- Gallery
+	- Videa media
+	- Podcast media
+	- The book
+- Contact
+	- A contact form
+	- Send's all submissions directly to scott@thrivehappens.com
+	- Once complete it shows a thank you
+
+Look & feel:
+- Corporate
+
+Styling:
+- Justified text
+
+Media:
+- 
+
+Rules:
+- Use the media, in the assets folder, on the website
+- Use the resources folder to help build the website
+- Use only the framework(s) mentioned
+- Use only the colour(s) mentioned
+
+Best Practices:
+- Do not modify code or UI elements that already work unless explicitly instructed
+- Always ask clarifying questions if tasks or requirements are unclear
+
+
+
+
+
