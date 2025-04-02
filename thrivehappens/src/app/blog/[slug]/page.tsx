@@ -7,6 +7,14 @@ interface BlogPostParams {
   };
 }
 
+// Add generateStaticParams function
+export async function generateStaticParams() {
+  // Return all possible blog post slugs
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
 export default function BlogPostPage({ params }: BlogPostParams) {
   const { slug } = params;
   
