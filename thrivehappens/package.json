@@ -4,15 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npx @opennextjs/cloudflare build",
+    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "deploy": "npx @opennextjs/cloudflare deploy",
-    "preview": "npx @opennextjs/cloudflare preview"
+    "lint": "next lint"
   },
   "dependencies": {
     "@heroicons/react": "2.0.18",
-    "@opennextjs/cloudflare": "^0.6.6",
     "@tailwindcss/typography": "^0.5.10",
     "next": "14.1.0",
     "react": "^18.2.0",
