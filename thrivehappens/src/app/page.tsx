@@ -6,35 +6,21 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="bg-purple-700 text-white pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 items-center">
+            <div className="text-center sm:text-left">
+              <h1 className="text-4xl md:text-5xl font-bold mb-8">
                 Thrive Happens
               </h1>
-              <p className="text-xl md:text-2xl text-gray-700 mb-8">
+              <p className="text-xl md:text-2xl max-w-3xl">
                 Building Resilient Organizations Through Strategic Leadership Development
               </p>
-              <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                <Link 
-                  href="#about" 
-                  className="px-6 py-3 bg-purple-700 text-white font-semibold rounded-md hover:bg-purple-800 transition-colors"
-                >
-                  Our Solutions
-                </Link>
-                <Link 
-                  href="/contact" 
-                  className="px-6 py-3 bg-gray-200 text-gray-900 font-semibold rounded-md hover:bg-gray-300 transition-colors"
-                >
-                  Contact Us
-                </Link>
-              </div>
             </div>
             <div className="relative">
               <div className="relative h-64 md:h-96 w-full">
-                <div className="absolute inset-0 bg-purple-200 rounded-lg"></div>
-                <div className="absolute inset-0 flex items-center justify-center text-purple-700">
+                <div className="absolute inset-0 bg-purple-500 rounded-lg opacity-50"></div>
+                <div className="absolute inset-0 flex items-center justify-center text-white">
                   [Corporate Leadership Image]
                 </div>
               </div>
@@ -51,7 +37,7 @@ export default function Home() {
             <div className="w-24 h-1 bg-purple-700 mx-auto mb-6"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <div className="relative h-64 md:h-80 w-full">
                 <div className="absolute inset-0 bg-purple-100 rounded-lg"></div>
@@ -61,7 +47,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="text-center md:text-left">
+            <div className="text-center sm:text-left">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Excellence in Leadership Development</h3>
               <p className="text-gray-700 mb-6">
                 Thrive Happens is a premier leadership development consultancy specializing in building resilient organizations. We transform businesses through strategic coaching, workshops, and organizational development programs.
@@ -69,7 +55,7 @@ export default function Home() {
               <p className="text-gray-700 mb-6">
                 Our proven methodologies and evidence-based approaches help organizations develop robust leadership capabilities, enhance team performance, and create sustainable success in challenging business environments.
               </p>
-              <div className="flex justify-center md:justify-start">
+              <div className="flex justify-center sm:justify-start">
                 <Link 
                   href="/services" 
                   className="px-6 py-3 bg-purple-700 text-white font-semibold rounded-md hover:bg-purple-800 transition-colors"
@@ -93,7 +79,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <div className="relative h-48">

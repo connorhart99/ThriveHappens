@@ -1,2 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
 Always follow these rules:
-- Deeply analyse the PRD document and follow everything written in there 
+- Anything written in the PRD needs to taken into consideration when building the website
+- Use the media, in the assets folder, on the website
+- Use the resources folder to help build the website
+- Optimized grid layouts

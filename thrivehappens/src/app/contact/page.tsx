@@ -34,18 +34,10 @@ export default function ContactPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mx-auto text-center">
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">Additional Ways to Reach Us</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex justify-center">
+                <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
                   <h4 className="text-lg font-medium text-gray-900 mb-2">Email</h4>
                   <p className="text-gray-600">scott@thrivehappens.com</p>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h4 className="text-lg font-medium text-gray-900 mb-2">Location</h4>
-                  <p className="text-gray-600">Greater Boston Area</p>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                  <h4 className="text-lg font-medium text-gray-900 mb-2">Hours</h4>
-                  <p className="text-gray-600">Monday - Friday<br />9:00 AM - 5:00 PM EST</p>
                 </div>
               </div>
             </div>

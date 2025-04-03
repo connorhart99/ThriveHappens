@@ -19,7 +19,7 @@ export default function ServicesPage() {
       {/* Services Grid */}
       <section id="services" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <div className="relative h-48">
@@ -63,7 +63,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {process.map((step, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-md">
                 <div className="w-12 h-12 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center text-xl font-bold mb-6 mx-auto">
@@ -92,7 +92,7 @@ const services = [
       "High-performance team building",
       "Crisis leadership preparation"
     ],
-    link: "/contact"
+    link: "/services/executive-coaching"
   },
   {
     title: "Organizational Resilience",
@@ -103,7 +103,7 @@ const services = [
       "Risk management strategies",
       "Sustainable growth planning"
     ],
-    link: "/contact"
+    link: "/services/resilience-workshops"
   },
   {
     title: "Team Performance Enhancement",
@@ -114,7 +114,18 @@ const services = [
       "Conflict resolution skills",
       "Performance metrics implementation"
     ],
-    link: "/contact"
+    link: "/services/platform-speaker"
+  },
+  {
+    title: "Media & Public Speaking",
+    description: "Professional media presence and public speaking expertise for organizational leaders.",
+    features: [
+      "Media interview preparation",
+      "Public speaking coaching",
+      "Message development",
+      "Crisis communication training"
+    ],
+    link: "/services/media"
   }
 ];
 

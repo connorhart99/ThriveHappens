@@ -1,4 +1,6 @@
 Order:
+- Optimise for mobile
+- Redirect services buttons in footer & buttons on services page
 
 Scott:
 - 3 colours

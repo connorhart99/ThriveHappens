@@ -2,44 +2,57 @@ import Link from 'next/link';
 
 export default function ExecutiveCoachingPage() {
   return (
-    <main className="pt-24 pb-16">
+    <main>
       {/* Hero Section */}
-      <section className="bg-purple-700 text-white py-16">
+      <section className="bg-purple-700 text-white pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Executive Coaching</h1>
-              <p className="text-xl mb-8">
-                Personalized coaching to help leaders develop resilience strategies and overcome challenges in their professional and personal lives.
-              </p>
-              <Link
-                href="#contact"
-                className="inline-block px-8 py-3 bg-white text-purple-700 font-semibold rounded-md hover:bg-gray-100 transition-colors"
-              >
-                Get Started
-              </Link>
-            </div>
-            <div className="relative">
-              <div className="relative h-64 md:h-96 w-full">
-                <div className="absolute inset-0 bg-purple-500 rounded-lg opacity-50"></div>
-                <div className="absolute inset-0 flex items-center justify-center text-white text-2xl">
-                  [Executive Coaching Image]
-                </div>
-              </div>
-            </div>
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-8">Executive Coaching</h1>
+            <p className="text-xl max-w-3xl mx-auto">
+              Personalized coaching to help leaders develop resilience strategies and overcome challenges in their professional and personal lives.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Introduction */}
+      {/* Service Overview */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Elevate Your Leadership</h2>
-            <p className="text-lg text-gray-700 mb-10">
-              In today's complex and rapidly changing environment, leaders face unprecedented challenges. Scott Hanley's executive coaching provides personalized support to help you navigate these challenges while building the resilience needed to thrive under pressure.
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-8">Executive Coaching</h1>
+            <div className="w-16 h-1 bg-purple-700 mx-auto mb-8"></div>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+              Personalized coaching to help leaders develop resilience strategies and overcome challenges in their professional and personal lives.
             </p>
-            <div className="w-24 h-1 bg-purple-700 mx-auto"></div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mt-12">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">Elevate Your Leadership</h2>
+              <p className="text-lg text-gray-700 mb-6">
+                In today's complex and rapidly changing environment, leaders face unprecedented challenges. Scott Hanley's executive coaching provides personalized support to help you navigate these challenges while building the resilience needed to thrive under pressure.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                <Link 
+                  href="/contact" 
+                  className="px-6 py-3 bg-purple-700 text-white font-semibold rounded-md hover:bg-purple-800 transition-colors text-center"
+                >
+                  Book a Consultation
+                </Link>
+                <Link 
+                  href="/services" 
+                  className="px-6 py-3 bg-gray-200 text-gray-900 font-semibold rounded-md hover:bg-gray-300 transition-colors text-center"
+                >
+                  View All Services
+                </Link>
+              </div>
+            </div>
+            <div className="relative h-96">
+              <div className="absolute inset-0 bg-purple-100 rounded-lg"></div>
+              <div className="absolute inset-0 flex items-center justify-center text-purple-700">
+                [Executive Coaching Image]
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -159,7 +172,7 @@ export default function ExecutiveCoachingPage() {
             Contact Scott today to schedule a free initial consultation and discuss how executive coaching can help you achieve your goals.
           </p>
           <Link
-            href="/#contact"
+            href="/contact"
             className="inline-block px-8 py-3 bg-white text-purple-700 font-semibold rounded-md hover:bg-gray-100 transition-colors"
           >
             Book a Consultation

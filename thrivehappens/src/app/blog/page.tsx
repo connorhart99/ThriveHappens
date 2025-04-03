@@ -4,16 +4,21 @@ export default function BlogPage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="bg-purple-700 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">Blog</h1>
+      <section className="bg-purple-700 text-white pt-32 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-8">Blog</h1>
+            <p className="text-xl max-w-3xl mx-auto">
+              Insights and strategies for building resilience and leadership excellence
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Blog Posts */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
               <BlogPostCard key={index} post={post} />
             ))}
