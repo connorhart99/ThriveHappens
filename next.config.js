@@ -6,8 +6,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  distDir: '.next',
-  poweredByHeader: false,
 };
 
 module.exports = nextConfig; 
