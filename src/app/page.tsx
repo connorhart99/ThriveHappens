@@ -20,7 +20,7 @@ export default function Home() {
               </p>
             </div>
             <div className="relative">
-              <div className="relative h-64 md:h-96 w-full">
+              <div className="relative h-64 w-64 md:h-96 md:w-96 mx-auto">
                 <Image
                   src="/ScottSpeaker3.jpg"
                   alt="Scott Speaking"
