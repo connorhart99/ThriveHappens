@@ -1,0 +1,10 @@
+[build]
+command = "npm run build"
+node_version = "18"
+output_directory = ".next"
+
+[build.environment]
+NODE_VERSION = "18"
+
+[compatibility_flags]
+nodejs_compat = true 

@@ -2,13 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  output: 'standalone',
+  output: 'export',
   images: {
     unoptimized: true,
   },
-  experimental: {
-    optimizeCss: true,
-  },
+  distDir: '.next',
+  poweredByHeader: false,
 };
 
 module.exports = nextConfig; 
